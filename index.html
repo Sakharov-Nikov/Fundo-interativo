@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundo interativo com mouse</title>
+    <style type="text/css">
+        body{
+            overflow: hidden;
+            height: 100vh;
+            width: 100%;
+            background-image: url(https://media.discordapp.net/attachments/762874751228051515/1022615415429550100/path1081.png?width=217&height=217);
+            background-size: 123px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        h1{
+            font-family: sans-serif;
+            font-weight: 800;
+            color: #5865f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hiyu!</h1>
+    <script>
+        document.onmousemove = (e) => {
+            let body = document.querySelector('body');
+            var x = -e.clientX / 5,
+                y = -e.clientY / 5;
+            body.style = `background-position: ${x}px ${y}px;`
+        }
+    </script>
+</body>
+</html>
